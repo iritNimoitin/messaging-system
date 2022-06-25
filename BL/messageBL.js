@@ -37,8 +37,10 @@ const readMessageByID = async function (id) {
   try {
     response = await messageDAL.getMessageById(id);
   } catch (error) {
+    return `${response}, kgbdkjasvkdasdvask`;
     throw "this message doesn't exists";
   }
+
   if (Object.keys(response).length === 0) {
     throw "this message doesn't exists";
   }

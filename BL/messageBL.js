@@ -34,7 +34,7 @@ const readMessage = async function (reciverEmail) {
 
 const readMessageByID = async function (id) {
   const response = await messageDAL.getMessageById(id);
-  if (Object.keys(response).length === 0) {
+  if (Object.entries(response).length === 0) {
     throw "this message doesn't exists";
   }
   if (!response.isSeen) {

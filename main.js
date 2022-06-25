@@ -4,8 +4,8 @@ const dotenv = require("dotenv");
 
 dotenv.config();
 
-const messageRouter = require("./routers/messageRouter");
-const authRouter = require("./routers/authRauter");
+const messageRouter = require("./Routers/messageRouter");
+const authRouter = require("./Routers/authRauter");
 
 const cors = require("cors");
 const app = express();
@@ -20,4 +20,4 @@ require("./configs/database");
 app.use("/api/message", messageRouter);
 app.use("/api/user", authRouter);
 
-app.listen(process.env.PORT || 7000);
+app.listen(process.env.PORT || 8000);

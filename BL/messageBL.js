@@ -33,10 +33,10 @@ const readMessage = async function (reciverEmail) {
 };
 
 const readMessageByID = async function (id) {
-  //const response = await messageDAL.getMessageById(id);
-  //if (Object.keys(response).length === 0) {
-  throw "this message doesn't exists";
-  //}
+  const response = await messageDAL.getMessageById(id);
+  if (Object.keys(response).length === 0) {
+    throw "this message doesn't exists";
+  }
   if (!response.isSeen) {
     await messageDAL.updateSeenMessage(id);
   }

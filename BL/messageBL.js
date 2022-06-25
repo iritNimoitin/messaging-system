@@ -40,6 +40,7 @@ const readMessageByID = async function (id) {
     return `${response}, kgbdkjasvkdasdvask`;
     throw "this message doesn't exists";
   }
+  return `${response}, 41432515312`;
 
   if (Object.keys(response).length === 0) {
     throw "this message doesn't exists";
